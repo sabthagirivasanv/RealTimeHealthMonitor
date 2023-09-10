@@ -5,59 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvSymptomHeading"
+    <Spinner
+        android:id="@+id/spnSymptoms"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginHorizontal="20dp"
+        android:padding="10dp"
+        android:animateLayoutChanges="true"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Symptoms Logger"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/etKey"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <RatingBar
+        android:id="@+id/rbStar"
+        android:layout_width="232dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Key"
-        app:layout_constraintEnd_toEndOf="@+id/tvSymptomHeading"
-        app:layout_constraintStart_toStartOf="@+id/tvSymptomHeading"
-        app:layout_constraintTop_toBottomOf="@+id/tvSymptomHeading" />
-
-    <EditText
-        android:id="@+id/etValue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Value"
-        app:layout_constraintTop_toBottomOf="@+id/etKey"
-        tools:layout_editor_absoluteX="86dp" />
-
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="20dp"
-        android:text="Save"
-        app:layout_constraintStart_toStartOf="@+id/etValue"
-        app:layout_constraintTop_toBottomOf="@+id/etValue" />
-
-    <Button
-        android:id="@+id/btnLoad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Load"
-        android:layout_margin="20dp"
+        android:numStars="5"
+        android:rating="0.0"
+        android:stepSize="1.0"
+        android:progressTint="@color/gradient_start"
+        android:secondaryProgressTint="@color/gradient_end"
+        android:progressBackgroundTint="@color/grey"
+        app:layout_constraintBottom_toTopOf="@+id/btnUploadData"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toEndOf="@+id/btnSave"
-        app:layout_constraintTop_toBottomOf="@+id/etValue" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnSymptoms"
+        app:layout_constraintVertical_bias="0.409" />
+
+    <Button
+        android:id="@+id/btnUploadData"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_shape_gradient"
+        android:onClick="onSymptomButtonClick"
+        android:text="Upload Data"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
