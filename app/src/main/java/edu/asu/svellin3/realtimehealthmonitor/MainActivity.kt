@@ -175,4 +175,9 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    fun onDistanceFinderButtonClick(view: View) {
+        val intent = Intent(this, DistanceFinderActivity::class.java)
+        startActivity(intent)
+    }
+
 }

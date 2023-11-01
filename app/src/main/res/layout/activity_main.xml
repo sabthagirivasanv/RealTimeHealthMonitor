@@ -70,6 +70,21 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:background="@drawable/btn_shape_gradient"
+        app:layout_constraintBottom_toTopOf="@id/distanceFinderButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/distanceFinderButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/btn_shape_gradient"
+        android:onClick="onDistanceFinderButtonClick"
+        android:text="Distance Finder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
